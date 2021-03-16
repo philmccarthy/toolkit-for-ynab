@@ -129,10 +129,9 @@ export function withReportContextProvider(InnerComponent) {
           'visibleTransactionDisplayItems'
         );
         const allReportableTransactions = visibleTransactionDisplayItems.filter(
-          transaction =>
-            !transaction.get('isSplit') &&
-            !transaction.get('isScheduledTransaction') &&
-            !transaction.get('isScheduledSubTransaction')
+          transaction => !transaction.get('isSplit')
+          // !transaction.get('isScheduledTransaction') &&
+          // !transaction.get('isScheduledSubTransaction')
         );
 
         this.setState(

@@ -145,7 +145,6 @@ export class DateFilterComponent extends React.Component {
     // we need to convert `.getYear()` into a string.
     while (date.getYear().toString() === selectedYear.toString()) {
       options.push({
-        disabled: date.isAfter(today) || date.isBefore(this.firstMonthOfBudget),
         month: date.getMonth(),
       });
 
